@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+    --color-dark: #202216;     
+    --color-gold: #f2de9b;      
+    --color-gold-darker: #c4b06d;     
+    --color-background: #e9e7e5;
+    --color-gray: #c9c7ba;
+    --color-secondary: #EF5368;  
+  }
+
+  html, body {
+    font-family: "Montserrat", sans-serif;
+    height: 100%
+    
+  }
+  
+  h1 {
+    font-family: "Oswald", sans-serif;
+    font-weight: 700;
+    letter-spacing: 2px;
+   
+  }
+
+  .bg-blur {
+    background: rgba(255, 255, 255, 0.4); /* Blanco con transparencia */
+    backdrop-filter: blur(10px); /* Desenfoque del fondo */
+  }
+
+  /* efecto para el mensaje principal */
+  @keyframes fadeInOut {
+    0%, 100% {
+      opacity: 0; /* Desaparece */
+    }
+    50% {
+      opacity: 1; /* Aparece */
+    }
+  }
+  
+  .typing-effect {
+    display: inline-block;
+    animation: fadeInOut 3s linear infinite; /* Animación lineal infinita */
+  }

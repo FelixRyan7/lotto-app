@@ -92,10 +92,10 @@ const LoginForm = () => {
 
           
           <div className=" ">
-            <button type="submit" className="w-full py-3 bg-secondary text-background font-semibold rounded-md focus:outline-none hover:bg-gradient-to-l hover:scale-105 transition-transform">Iniciar sesión</button>
+            <button type="submit" className="w-full py-3 bg-primary outline-primary text-dark font-semibold rounded-md focus:outline-none hover:bg-primary-darker hover:text-dark hover:outline-none transition-transform-all duration-300 ease-in-out">Iniciar sesión</button>
           </div>
-          <div className="flex justify-between mt-5 mx-2">
-          <p className='cursor-pointer'>Aun no tienes cuenta?</p>
+          <div className="flex justify-between align-center mt-5 mx-2">
+          <p className='text-sm cursor-pointer'>Aun no tienes cuenta?</p>
           <p className="text-sm cursor-pointer">Has olvidado la contraseña?</p>
           </div>
         </form>

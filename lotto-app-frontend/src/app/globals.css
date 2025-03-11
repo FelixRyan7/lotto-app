@@ -31,7 +31,7 @@
   }
 
   .bg-blur {
-    background: rgba(255, 255, 255, 0.4); /* Blanco con transparencia */
+    background: rgba(255, 255, 255, 0.16); /* Blanco con transparencia */
     backdrop-filter: blur(10px); /* Desenfoque del fondo */
   }
 
@@ -49,3 +49,11 @@
     display: inline-block;
     animation: fadeInOut 3s linear infinite; /* Animación lineal infinita */
   }
+
+  .layout {
+    background-image: url('/images/bg-home-page.jpg');
+    background-size: cover;  /* Ajusta la imagen al tamaño del contenedor */
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;  /* Asegura que cubra toda la pantalla */
+}

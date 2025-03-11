@@ -12,7 +12,7 @@ const Header = () => {
     const isHome = pathname === "/"
 
   return (
-    <header className={`flex justify-between items-center p-5 h-[100px] ${isHome ? "bg-dark" : "bg-dark"}`}>
+    <header className={`flex justify-between items-center p-5 h-[100px] ${isHome ? "bg-transparent" : "bg-dark"}`}>
       
       <h1 className='text-5xl uppercase text-background'>lottery</h1>
       <div className='flex gap-5 items-center'>

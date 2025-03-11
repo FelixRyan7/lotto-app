@@ -1,0 +1,50 @@
+name: CI Workflow for Frontend
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04  # Usamos una versión específica de Ubuntu para estabilidad
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2  # Clona el repositorio
+
+      - name: Confirm checkout
+        run: echo "Repositorio clonado correctamente ✅"
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2  # Configura Node.js
+        with:
+          node-version: 18
+
+      - name: Confirm Node.js setup
+        run: echo "Node.js configurado correctamente ✅"
+
+      - name: Install dependencies
+        working-directory: lotto-app-frontend  # Cambia el directorio de trabajo
+        run: |
+          echo "Instalando dependencias..."
+          npm install
+          echo "Dependencias instaladas correctamente ✅"
+          
+
+      - name: Install Playwright browsers
+        working-directory: lotto-app-frontend  # Ruta de tu frontend
+        run: |
+          echo "Instalando navegadores de Playwright..."
+          npx playwright install
+          echo "Navegadores de Playwright instalados correctamente ✅"
+
+      - name: Run playwright tests
+        working-directory: lotto-app-frontend   # Se ejecuta en la carpeta correcta
+        run: |
+          echo "Ejecutando pruebas..."
+          npm run test:playwright
+          echo "Pruebas finalizadas ✅"
